@@ -1,0 +1,49 @@
+{
+  "backbone.classifier.1.weight": [
+    512,
+    1280
+  ],
+  "backbone.classifier.1.bias": [
+    512
+  ],
+  "backbone.classifier.2.weight": [
+    512
+  ],
+  "backbone.classifier.2.bias": [
+    512
+  ],
+  "backbone.classifier.2.running_mean": [
+    512
+  ],
+  "backbone.classifier.2.running_var": [
+    512
+  ],
+  "backbone.classifier.2.num_batches_tracked": [],
+  "backbone.classifier.5.weight": [
+    256,
+    512
+  ],
+  "backbone.classifier.5.bias": [
+    256
+  ],
+  "backbone.classifier.6.weight": [
+    256
+  ],
+  "backbone.classifier.6.bias": [
+    256
+  ],
+  "backbone.classifier.6.running_mean": [
+    256
+  ],
+  "backbone.classifier.6.running_var": [
+    256
+  ],
+  "backbone.classifier.6.num_batches_tracked": [],
+  "backbone.classifier.9.weight": [
+    50,
+    256
+  ],
+  "backbone.classifier.9.bias": [
+    50
+  ]
+}
