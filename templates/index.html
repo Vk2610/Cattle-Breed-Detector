@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cattle Breed Classifier</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            🐄 AI Breed Classifier
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#predict">Predict</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                AI Powered <span>Cattle Breed</span> Identification
+            </h1>
+
+            <p>
+                Upload cattle images and identify breeds instantly using Deep Learning and Computer Vision.
+            </p>
+
+            <a href="#predict" class="hero-btn">
+                Start Prediction
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/cattle.jpg') }}" alt="Cattle">
+        </div>
+
+    </section>
+
+
+    <!-- Prediction Section -->
+    <section class="prediction-section" id="predict">
+
+        <div class="section-header">
+            <h2>Breed Prediction</h2>
+            <p>Upload a cattle image for AI analysis</p>
+        </div>
+
+        <div class="prediction-card">
+
+            <div class="upload-box" id="uploadBox">
+
+                <div class="upload-icon">📤</div>
+
+                <h3>Upload Cattle Image</h3>
+
+                <p>
+                    Drag & drop image or choose file
+                </p>
+
+                <button onclick="document.getElementById('fileInput').click()">
+                    Choose Image
+                </button>
+
+                <input type="file" id="fileInput" accept="image/*">
+
+            </div>
+
+
+            <!-- Preview -->
+            <div class="preview-section" id="previewSection">
+
+                <img id="previewImg" src="" alt="Preview">
+
+            </div>
+
+
+            <!-- Loading -->
+            <div class="loading" id="loading">
+
+                <div class="spinner"></div>
+
+                <p>Analyzing Image...</p>
+
+            </div>
+
+
+            <!-- Result -->
+            <div class="result-card" id="resultCard">
+
+                <h2 id="breedName">Gir</h2>
+
+                <p id="confidence">96.4% Confidence</p>
+
+                <div class="progress-bar">
+
+                    <div class="progress-fill" id="progressFill"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Warning Card -->
+            <div class="warning-card" id="warningCard">
+
+                <div class="warning-icon">⚠️</div>
+
+                <h3>No cattle detected</h3>
+
+                <p>Please upload a valid cattle image for breed identification.</p>
+
+                <button onclick="resetUpload()">Upload Another Image</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features" id="features">
+
+        <div class="section-header">
+
+            <h2>Project Features</h2>
+
+            <p>
+                Modern AI-powered breed detection system
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <h3>Deep Learning</h3>
+
+                <p>
+                    Built using PyTorch and EfficientNet architecture.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <h3>Fast Prediction</h3>
+
+                <p>
+                    Predict cattle breeds within seconds.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <h3>Responsive UI</h3>
+
+                <p>
+                    Professional responsive design for all devices.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <h3>Confidence Score</h3>
+
+                <p>
+                    Displays confidence percentage for predictions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div class="section-header">
+
+            <h2>About Project</h2>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p>
+                This project uses Artificial Intelligence and Computer Vision
+                to identify cattle breeds from uploaded images.
+                The backend is developed using Flask and PyTorch,
+                while the frontend is built using modern HTML, CSS and JavaScript.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 AI Cattle Breed Classifier | Flask + PyTorch
+        </p>
+
+    </footer>
+
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
