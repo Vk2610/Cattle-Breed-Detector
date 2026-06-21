@@ -1,3 +1,4 @@
+# Description : This file defines a PyTorch model for cattle breed classification.
 import torch.nn as nn
 from torchvision.models import efficientnet_v2_s
 
