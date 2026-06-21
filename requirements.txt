@@ -1,3 +1,6 @@
+# Description : This file stores a required module names 
+# To install the modules : pip install -r requirements.txt
+
 flask
 torch
 torchvision
